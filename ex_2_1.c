@@ -14,6 +14,13 @@ int main() {
 	printf("\t1. Happy Face\n\t2. Balanced Number\n\t3. Generous Number\n\t4. Circle Of Joy\n\t5. Happy Numbers\n\t6. Festival Of Laughter\n\t7. Exit\n");
 	scanf("%d", &x);
 
+	// Case 1: Draw Happy Face with given symbols for eyes, nose and mouse
+	/* Example:
+	* n = 3:
+	* 0   0
+	*   o
+	* \___/
+	*/
 		if (x == 1) {
 			char e, n, m;
 			int faceSize;
@@ -44,16 +51,16 @@ int main() {
 			}
 			printf("/\n");
 				
-			
-	// Case 1: Draw Happy Face with given symbols for eyes, nose and mouse
-	/* Example:
-	* n = 3:
-	* 0   0
-	*   o
-	* \___/
-	*/
 		}
-			
+
+
+	// Case 2: determine whether the sum of all digits to the left of the middle digit(s)
+	// and the sum of all digits to the right of the middle digit(s) are equal
+	/* Examples:
+	Balanced: 1533, 450810, 99
+	Not blanced: 1552, 34
+	Please notice: the number has to be bigger than 0.
+	*/
 		else if (x == 2) {
 			int num;
 			printf("Enter a number:\n");
@@ -97,24 +104,22 @@ int main() {
 				printf("This number isn't balanced and destroys harmony.\n");
 			}
 			
-			
+		}
 
-	// Case 2: determine whether the sum of all digits to the left of the middle digit(s)
-	// and the sum of all digits to the right of the middle digit(s) are equal
+	// Case 3: determine whether the sum of the proper divisors (od an integer) is greater than the number itself
 	/* Examples:
-	Balanced: 1533, 450810, 99
-	Not blanced: 1552, 34
+	Abudant: 12, 20, 24
+	Not Abudant: 3, 7, 10
 	Please notice: the number has to be bigger than 0.
 	*/
-		}
+
 		else if (x == 3) {
 			int num;
 			printf("Enter a number:\n");
 			scanf("%d", &num);
 
 			while (num < 0) {
-				printf("Only positive number is allowed, please try again:
-");
+				printf("Only positive number is allowed, please try again:");
 				scanf("%d", &num);
 			}
 
@@ -131,14 +136,8 @@ int main() {
 			else {
 				printf("This number does not share.\n");
 			}
+		}
 			
-	// Case 3: determine whether the sum of the proper divisors (od an integer) is greater than the number itself
-	/* Examples:
-	Abudant: 12, 20, 24
-	Not Abudant: 3, 7, 10
-	Please notice: the number has to be bigger than 0.
-	*/
-
 	// Case 4: determine wether a number is a prime.
 	/* Examples:
 	This one brings joy: 3, 5, 11
@@ -151,8 +150,7 @@ int main() {
 			scanf("%d", &num);
 
 			while (num < 0) {
-				printf("Only positive number is allowed, please try again:
-");
+				printf("Only positive number is allowed, please try again:");
 				scanf("%d", &num);
 			}
 
@@ -217,8 +215,7 @@ int main() {
 			scanf("%d", &num);
 
 			while (num < 0) {
-				printf("Only positive number is allowed, please try again:
-");
+				printf("Only positive number is allowed, please try again:");
 				scanf("%d", &num);
 			}
 			printf("Between 1 and %d only these numbers bring happiness: ", num);
