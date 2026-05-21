@@ -10,9 +10,9 @@ int main() {
 	int x = 0;
 
 	while (x != 7) {
-	printf("Choose an option:\n");
-	printf("\t1. Happy Face\n\t2. Balanced Number\n\t3. Generous Number\n\t4. Circle Of Joy\n\t5. Happy Numbers\n\t6. Festival Of Laughter\n\t7. Exit\n");
-	scanf("%d", &x);
+		printf("Choose an option:\n");
+		printf("\t1. Happy Face\n\t2. Balanced Number\n\t3. Generous Number\n\t4. Circle Of Joy\n\t5. Happy Numbers\n\t6. Festival Of Laughter\n\t7. Exit\n");
+		scanf("%d", &x);
 
 	// Case 1: Draw Happy Face with given symbols for eyes, nose and mouse
 	/* Example:
