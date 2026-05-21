@@ -154,7 +154,7 @@ int main() {
 			scanf("%d", &num);
 
 			while (num < 0) {
-				printf("Only positive number is allowed, please try again:");
+				printf("Only positive number is allowed, please try again:\n");
 				scanf("%d", &num);
 			}
 
