@@ -7,9 +7,9 @@ Assignment: ex2
 #include <stdio.h>
 
 int main() {
-	int x;
+	int x = 0;
 
-	do {
+	while (x != 7) {
 	printf("Choose an option:\n");
 	printf("\t1. Happy Face\n\t2. Balanced Number\n\t3. Generous Number\n\t4. Circle Of Joy\n\t5. Happy Numbers\n\t6. Festival Of Laughter\n\t7. Exit\n");
 	scanf("%d", &x);
@@ -313,7 +313,7 @@ int main() {
 		else {
 			printf("\nThis option is not available, please try again.");
 			}
-		} while (x != 7);
+		} 
 			
 	printf("\nThank you for your journey through Numeria!");
 	return 0;
