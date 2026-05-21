@@ -65,7 +65,7 @@ int main() {
 			int num;
 			printf("Enter a number:\n");
 			scanf("%d", &num);
-			while (num < 0) {
+			while (num <= 0) {
 				printf("Only positive number is allowed, please try again:\n");
 				scanf("%d", &num);
 			}
@@ -75,13 +75,17 @@ int main() {
 				temp /= 10;
 			}
 
-			int left = 0, right =0;
-			int mid_num1 = (z / 2);
+			int leftSum = 0, rightSum =0;
+			int left, right;
 
 			if((z & 1) == 0) {
-				mid_num1 = (z / 2) - 1;
+				left = z / 2;
+				right = (z / 2) -1;
 			}
-			int mid_num2 = z / 2;
+			else {
+				left = z / 2;
+				right = z / 2;
+			}
 
 			temp = num;
 			for (int i = 0; i < z; i++) {
@@ -89,15 +93,15 @@ int main() {
 				temp /= 10;
 				int place = z - 1 - i;
 
-				if (place < mid_num1) {
-					left += digit;
+				if (place < left) {
+					leftSum += digit;
 				}
-				else if (place > mid_num2) {
-					right += digit;
+				else if (place > right) {
+					rightSum += digit;
 				}
 			}
 
-			if (left == right) {
+			if (leftSum == rightSum) {
 				printf("This number is balanced and brings harmony!\n");
 			}
 			else {
