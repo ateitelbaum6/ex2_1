@@ -1,6 +1,6 @@
 /******************
-Name:
-ID:
+Name: Atara Teitelbaum
+ID: 671938245
 Assignment: ex2
 *******************/
 
