@@ -18,11 +18,11 @@ int main() {
 			char e, n, m;
 			int faceSize;
 			printf("\nEnter symbols for the eyes, nose, and mouth:\n");
-			scanf("%c %c %c",&e, &n, &m);
+			scanf(" %c %c %c",&e, &n, &m);
 
 			printf("\nEnter face size:\n");
 			scanf("%d",&faceSize);
-			while (faceSize & 0 || faceSize < 0) {
+			while ((faceSize / 2)*2 == faceSize || faceSize < 0) {
 				printf("The face's size must be an odd and positive number, please try again:\n");
 				scanf("%d",&faceSize);
 			}
@@ -57,10 +57,10 @@ int main() {
 		else if (x == 2) {
 			int num;
 			printf("Enter a number:\n");
-			scanf("%d", num);
+			scanf("%d", &num);
 			while (num < 0) {
-				printf("Only positive number is allowed, please try again:/n");
-				scanf("%d", num);
+				printf("Only positive number is allowed, please try again:\n");
+				scanf("%d", &num);
 			}
 			int temp = num, z = 0;
 			while (temp > 0) {
@@ -91,10 +91,10 @@ int main() {
 			}
 
 			if (left == right) {
-				printf("This number is balanced and brings harmony!/n");
+				printf("This number is balanced and brings harmony!\n");
 			}
 			else {
-				printf("This number isn't balanced and destroys harmony./n");
+				printf("This number isn't balanced and destroys harmony.\n");
 			}
 			
 			
@@ -110,17 +110,18 @@ int main() {
 		else if (x == 3) {
 			int num;
 			printf("Enter a number:\n");
-			scanf("%d", num);
+			scanf("%d", &num);
 
 			while (num < 0) {
-				printf("Only positive number is allowed, please try again:/n");
-				scanf("%d", num);
+				printf("Only positive number is allowed, please try again:
+");
+				scanf("%d", &num);
 			}
 
 			int divSum = 0;
 			for (int i = 1; i < num; i++) {
 				if ((num / i) * i == num) {
-					divSum += 1;
+					divSum += i;
 				}
 			}
 
@@ -147,11 +148,12 @@ int main() {
     	else if (x == 4){
 			int num;
 			printf("Enter a number:\n");
-			scanf("%d", num);
+			scanf("%d", &num);
 
 			while (num < 0) {
-				printf("Only positive number is allowed, please try again:/n");
-				scanf("%d", num);
+				printf("Only positive number is allowed, please try again:
+");
+				scanf("%d", &num);
 			}
 
 			int primeChecker;
@@ -184,7 +186,7 @@ int main() {
 				revPrimeChecker = 0;
 			}
 			
-			for (int i = 2; i*i <= reverNum; i++) {
+			for (int i = 2; i*i <= reverseNum; i++) {
 				if ((reverseNum / i)*i == reverseNum) {
 					revPrimeChecker = 0;
 					break;
@@ -192,7 +194,7 @@ int main() {
 			}
 
 			if (primeChecker == 1 && revPrimeChecker == 1) {
-				printf("This number completes the circle of joy!"\n);
+				printf("This number completes the circle of joy!\n");
 			}
 			else {
 				printf("The circle remains incomplete\n");
@@ -209,14 +211,15 @@ int main() {
 	Please notice: the number has to be bigger than 0.
 	*/
 
-		else if {
+		else if (x == 5) {
 			int num;
 			printf("Enter a number:\n");
-			scanf("%d", num);
+			scanf("%d", &num);
 
 			while (num < 0) {
-				printf("Only positive number is allowed, please try again:/n");
-				scanf("%d", num);
+				printf("Only positive number is allowed, please try again:
+");
+				scanf("%d", &num);
 			}
 			printf("Between 1 and %d only these numbers bring happiness: ", num);
 			for (int i = 1; i <= num; i++) {
@@ -266,7 +269,7 @@ int main() {
 				else {
 					char l;
 					scanf(" %c", &l);
-					printf("Only 2 different positive numbers in the given format are allowed for the festival, please try again:/n");
+					printf("Only 2 different positive numbers in the given format are allowed for the festival, please try again:");
 				}
 			}
 
@@ -295,12 +298,14 @@ int main() {
 				else {
 					printf("%d\n", i);
 				}
-			
+			}
+		}
 
 		else {
-			printf("/nThis option is not available, please try again.");
+			printf("\nThis option is not available, please try again.");
 			}
-		} while (x!=7)
-	printf(/n"Thank you for your journey through Numeria!");
+		} while (x != 7);
+			
+	printf("\nThank you for your journey through Numeria!");
 	return 0;
 }
