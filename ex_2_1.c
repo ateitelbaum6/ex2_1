@@ -272,7 +272,7 @@ int main() {
 					do {
 						scanf("%c", &clean);
 					} while (clean != '\n');
-					printf("Only 2 different positive numbers in the given format are allowed for the festival, please try again:");
+					printf("Only 2 different positive numbers in the given format are allowed for the festival, please try again:\n");
 				}
 			}
 
