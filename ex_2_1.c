@@ -9,10 +9,14 @@ Assignment: ex2
 int main() {
 	int x = 0;
 
-	while (x != 7) {
+	do {
 		printf("Choose an option:\n");
 		printf("\t1. Happy Face\n\t2. Balanced Number\n\t3. Generous Number\n\t4. Circle Of Joy\n\t5. Happy Numbers\n\t6. Festival Of Laughter\n\t7. Exit\n");
 		scanf("%d", &x);
+
+		if (x == 7) {
+			break;
+		}
 
 	// Case 1: Draw Happy Face with given symbols for eyes, nose and mouse
 	/* Example:
@@ -219,7 +223,7 @@ int main() {
 			scanf("%d", &num);
 
 			while (num <= 0) {
-				printf("Only positive number is allowed, please try again:");
+				printf("Only positive number is allowed, please try again:\n");
 				scanf("%d", &num);
 			}
 			printf("Between 1 and %d only these numbers bring happiness: ", num);
@@ -311,9 +315,9 @@ int main() {
 		}
 
 		else {
-			printf("\nThis option is not available, please try again.");
+			printf("\nThis option is not available, please try again.\n");
 			}
-		} 
+		} while(x != 7);
 			
 	printf("\nThank you for your journey through Numeria!");
 	return 0;
