@@ -268,8 +268,10 @@ int main() {
 					valid = 1;
 				}
 				else {
-					char l;
-					scanf(" %c", &l);
+					char clean;
+					do {
+						scanf("%c", &clean);
+					} while (clean != '\n');
 					printf("Only 2 different positive numbers in the given format are allowed for the festival, please try again:");
 				}
 			}
@@ -277,7 +279,13 @@ int main() {
 			int max= -1;
 			while (max <= 0) {
 				printf("Enter max number for the festival:\n");
-				scanf("%d", &max);
+				if (scanf("%d", &max) != 1) {
+					char clean;
+					do {
+						scanf("%c", &clean);
+					} while (clean != '\n');
+					max = -1;
+				}
 				if (max <= 0) {
 					printf("Only positive max number is allowed, please try again:\n");
 				}
