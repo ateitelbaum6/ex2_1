@@ -218,7 +218,7 @@ int main() {
 			printf("Enter a number:\n");
 			scanf("%d", &num);
 
-			while (num < 0) {
+			while (num <= 0) {
 				printf("Only positive number is allowed, please try again:");
 				scanf("%d", &num);
 			}
