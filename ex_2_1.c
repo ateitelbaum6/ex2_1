@@ -281,8 +281,8 @@ int main() {
 			}
 
 			int max= -1;
+			printf("Enter maximum number for the festival:\n");
 			while (max <= 0) {
-				printf("Enter maximum number for the festival:\n");
 				if (scanf("%d", &max) != 1) {
 					char clean;
 					do {
