@@ -139,10 +139,10 @@ int main() {
 			}
 
 			if (divSum > num) {
-				printf("This number is generous!\n");
+				printf("\nThis number is generous!\n");
 			}
 			else {
-				printf("This number does not share.\n");
+				printf("\nThis number does not share.\n");
 			}
 		}
 			
@@ -203,7 +203,7 @@ int main() {
 				printf("This number completes the circle of joy!\n");
 			}
 			else {
-				printf("The circle remains incomplete\n");
+				printf("The circle remains incomplete.\n");
 			}
 
 		}
@@ -261,11 +261,11 @@ int main() {
 	6, smile: 2, cheer: 3 : 1, Smile!, Cheer!, Smile!, 5, Festival!
 	*/
 		else if (x == 6) {
+			printf("Enter a smile and cheer number:\n");
 			int smile = -1, cheer = -1;
 			int valid = 0;
 
 			while (valid == 0) {
-				printf("Enter a smile and cheer number:\n");
 				int c = scanf(" smile: %d , cheer: %d", &smile, &cheer);
 
 				if (c == 2 && smile > 0 && cheer > 0 && smile != cheer) {
@@ -282,7 +282,7 @@ int main() {
 
 			int max= -1;
 			while (max <= 0) {
-				printf("Enter max number for the festival:\n");
+				printf("Enter maximum number for the festival:\n");
 				if (scanf("%d", &max) != 1) {
 					char clean;
 					do {
@@ -291,7 +291,7 @@ int main() {
 					max = -1;
 				}
 				if (max <= 0) {
-					printf("Only positive max number is allowed, please try again:\n");
+					printf("Only positive maximum number is allowed, please try again:\n");
 				}
 			}
 
